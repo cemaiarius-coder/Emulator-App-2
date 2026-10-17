@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 sb.appendLine("--- NfcA (ISO 14443 Typ A) ---")
                 sb.appendLine("ATQA: ${bytesToHex(nfcA.atqa)}")
-                sb.appendLine("SAK: 0x${Integer.toHexString(nfcA.sak)}")
+                sb.appendLine("SAK: 0x${Integer.toHexString(nfcA.sak.toInt())}")
                 sb.appendLine()
             } catch (e: Exception) {
                 sb.appendLine("NfcA-Fehler: ${e.message}")
